@@ -1,4 +1,4 @@
-SELECT first_name, last_name, date_of_birth
+SELECT first_name, last_name
 FROM persons
-WHERE age(date_of_birth) < '20'
+WHERE EXTRACT( year FROM age(date_of_birth)) < 20
 ;

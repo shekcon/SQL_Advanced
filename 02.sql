@@ -1,4 +1,4 @@
-SELECT matches.id as match_id, sum(audiences.audience) as total_audience
+SELECT matches.id, sum(audiences.audience)
 FROM matches
     INNER JOIN audiences ON audiences.match_id = matches.id
 WHERE matches.stage_name = 'Quarter-finals'
